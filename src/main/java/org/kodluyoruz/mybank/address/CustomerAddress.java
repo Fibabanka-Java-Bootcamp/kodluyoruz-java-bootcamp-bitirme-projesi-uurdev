@@ -32,5 +32,6 @@ public class CustomerAddress {
     /*
        TODO :  added customer relation
        Customer(ONE) -> CustomerAddress(MANY)(Relation OWNER)
+       //customerNo
      */
 }
