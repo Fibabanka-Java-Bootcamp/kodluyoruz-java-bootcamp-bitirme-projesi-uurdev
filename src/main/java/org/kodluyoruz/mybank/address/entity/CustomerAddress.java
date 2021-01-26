@@ -1,4 +1,4 @@
-package org.kodluyoruz.mybank.address;
+package org.kodluyoruz.mybank.address.entity;
 
 
 import lombok.*;

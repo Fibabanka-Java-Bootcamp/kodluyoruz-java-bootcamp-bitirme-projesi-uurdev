@@ -35,3 +35,10 @@
 
 - Hesap ile Ödeme arasında 1'e çok ilişki olucak bir hesap birden fazla havale alabilir ya da havale yapabilir
 
+### Kart İşlemleri
+
+- 2 tip kart alıcak banka ve kredi kartı bu kartlar müşterinin hesaplarıyla ilişkili olucak
+
+- Vadesiz mevduat hesabına bağlı kullanıcı hem banka kartı hemde kredi kartı alabilicek ama varolan vadesiz tl hesabına bağlı olmalı
+
+- Bir banka hesabının 2 adet kartı olabilir , hesap 1 iken kart many olmalı
