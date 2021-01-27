@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "customerAddress")
+@Builder
 public class CustomerAddress {
 
     @Id
@@ -34,4 +35,6 @@ public class CustomerAddress {
        Customer(ONE) -> CustomerAddress(MANY)(Relation OWNER)
        //customerNo
      */
+
+    
 }

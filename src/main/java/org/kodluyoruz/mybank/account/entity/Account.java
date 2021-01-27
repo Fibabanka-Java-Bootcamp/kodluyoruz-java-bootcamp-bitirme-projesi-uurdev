@@ -15,6 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Table(name = "account")
 @Entity
+@Builder
 public class Account {
 
     @Id
