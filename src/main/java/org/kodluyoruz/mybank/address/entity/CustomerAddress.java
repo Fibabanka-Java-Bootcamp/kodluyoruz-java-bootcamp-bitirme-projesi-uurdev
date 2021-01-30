@@ -3,6 +3,7 @@ package org.kodluyoruz.mybank.address.entity;
 
 import lombok.*;
 import org.kodluyoruz.mybank.address.enums.AddressType;
+import org.kodluyoruz.mybank.customer.CustomerAccount;
 
 import javax.persistence.*;
 
@@ -35,6 +36,10 @@ public class CustomerAddress {
        Customer(ONE) -> CustomerAddress(MANY)(Relation OWNER)
        //customerNo
      */
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private CustomerAccount customerAccount;
 
     
 }

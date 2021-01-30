@@ -10,7 +10,7 @@ import org.springframework.util.StopWatch;
 @Component
 public class MethodRunningTimeAspect {
     /*
-        TODO :  bu ekran bir log mekanizması kurulup süresini ölçmek istediğim metodları o log dosyasına yazıcam! 
+        TODO :  bu ekran bir log mekanizması kurulup süresini ölçmek istediğim metodları o log dosyasına yazıcam!
      */
 
     @Around("@annotation(runtimeAspect)")

@@ -1,6 +1,7 @@
 package org.kodluyoruz.mybank.card.entity;
 
 import lombok.*;
+import org.kodluyoruz.mybank.account.entity.Account;
 import org.kodluyoruz.mybank.card.enums.CardType;
 
 import javax.persistence.*;
@@ -16,7 +17,7 @@ import java.math.BigDecimal;
 public class CustomerCard {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long cardId;
 
     private String cardOwnerName;
@@ -32,12 +33,14 @@ public class CustomerCard {
 
     private String cardCvv;
 
-    private BigDecimal cardBalance;
-
     @Enumerated(EnumType.STRING)
     private CardType cardType;
 
     /*
         TODO :  account(one) card(many) bir hesabın hem kredi kartı hemde ön ödemeli kartı olabilir
      */
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 }
