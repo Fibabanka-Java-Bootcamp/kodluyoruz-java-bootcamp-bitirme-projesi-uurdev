@@ -1,5 +1,6 @@
 package org.kodluyoruz.mybank.customer;
 
+import com.sun.xml.bind.v2.TODO;
 import lombok.*;
 import org.kodluyoruz.mybank.account.entity.Account;
 import org.kodluyoruz.mybank.address.entity.CustomerAddress;
@@ -17,7 +18,7 @@ import java.util.Set;
 public class CustomerAccount {
 
     @Id
-    private Long customerId;
+    private Long identityNo;
 
     private String customerName;
 
@@ -25,13 +26,13 @@ public class CustomerAccount {
 
     private String customerPhone;
 
-    private String customerMail;
-
-    private String customerCreateDate;
-
    /*
     TODO : relation customeraccount(1) - account(many)(vadeli-birikim)
     */
+
+    @OneToOne(mappedBy = "accountDetail", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private CustomerDetail customerDetail;
 
     @OneToMany(mappedBy = "customerAccount", cascade = CascadeType.ALL)
     private Set<Account> accounts;

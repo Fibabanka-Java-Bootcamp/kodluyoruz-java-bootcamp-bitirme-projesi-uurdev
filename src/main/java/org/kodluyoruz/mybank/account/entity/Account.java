@@ -16,7 +16,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "account")
+@Table(name = "account" ,uniqueConstraints = @UniqueConstraint(columnNames = {"iban"}))
 @Entity
 @Builder
 public class Account {
@@ -25,6 +25,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long accountId;
 
+    @Column(name = "iban")
     private String iban;
 
     private BigDecimal balance;

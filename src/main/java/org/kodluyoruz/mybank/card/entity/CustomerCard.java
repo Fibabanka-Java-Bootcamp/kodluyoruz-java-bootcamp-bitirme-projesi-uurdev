@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "customerCard", uniqueConstraints = @UniqueConstraint(columnNames = {"card_number", "varchar"}))
+@Table(name = "customerCard", uniqueConstraints = @UniqueConstraint(columnNames = {"card_number"}))
 @Entity
 public class CustomerCard {
 
