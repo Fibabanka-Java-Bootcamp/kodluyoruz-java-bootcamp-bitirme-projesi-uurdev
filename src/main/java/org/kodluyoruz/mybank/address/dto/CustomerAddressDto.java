@@ -1,4 +1,4 @@
 package org.kodluyoruz.mybank.address.dto;
 
-public class AddressDto {
+public class CustomerAddressDto {
 }
