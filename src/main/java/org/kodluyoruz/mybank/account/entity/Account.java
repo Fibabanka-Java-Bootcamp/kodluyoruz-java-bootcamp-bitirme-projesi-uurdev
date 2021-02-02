@@ -4,7 +4,7 @@ import lombok.*;
 import org.kodluyoruz.mybank.account.enums.AccountMoneyType;
 import org.kodluyoruz.mybank.account.enums.AccountType;
 import org.kodluyoruz.mybank.card.entity.CustomerCard;
-import org.kodluyoruz.mybank.customer.CustomerAccount;
+import org.kodluyoruz.mybank.customer.entity.CustomerAccount;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

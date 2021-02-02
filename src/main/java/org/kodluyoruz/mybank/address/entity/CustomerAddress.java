@@ -3,7 +3,7 @@ package org.kodluyoruz.mybank.address.entity;
 
 import lombok.*;
 import org.kodluyoruz.mybank.address.enums.AddressType;
-import org.kodluyoruz.mybank.customer.CustomerAccount;
+import org.kodluyoruz.mybank.customer.entity.CustomerAccount;
 import javax.persistence.*;
 
 @Data

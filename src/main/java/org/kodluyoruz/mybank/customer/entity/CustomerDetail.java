@@ -1,6 +1,9 @@
-package org.kodluyoruz.mybank.customer;
+package org.kodluyoruz.mybank.customer.entity;
 
 import lombok.*;
+import org.kodluyoruz.mybank.customer.entity.CustomerAccount;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +15,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "customerDetail")
+@Controller
+@RestController
 public class CustomerDetail {
 
     @Id

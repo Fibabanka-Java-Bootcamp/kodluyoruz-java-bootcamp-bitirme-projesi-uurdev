@@ -1,6 +1,5 @@
-package org.kodluyoruz.mybank.customer;
+package org.kodluyoruz.mybank.customer.entity;
 
-import com.sun.xml.bind.v2.TODO;
 import lombok.*;
 import org.kodluyoruz.mybank.account.entity.Account;
 import org.kodluyoruz.mybank.address.entity.CustomerAddress;

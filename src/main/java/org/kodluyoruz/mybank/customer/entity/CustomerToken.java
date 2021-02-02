@@ -1,4 +1,4 @@
-package org.kodluyoruz.mybank.customer;
+package org.kodluyoruz.mybank.customer.entity;
 
 import lombok.*;
 
