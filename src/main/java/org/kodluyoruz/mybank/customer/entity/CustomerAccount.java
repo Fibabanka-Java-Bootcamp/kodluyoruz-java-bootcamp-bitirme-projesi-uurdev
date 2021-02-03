@@ -1,10 +1,11 @@
 package org.kodluyoruz.mybank.customer.entity;
 
 import lombok.*;
-import org.kodluyoruz.mybank.account.entity.Account;
+import org.kodluyoruz.mybank.account.entity.BankAccount;
 import org.kodluyoruz.mybank.address.entity.CustomerAddress;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 @Data
@@ -25,16 +26,22 @@ public class CustomerAccount {
 
     private String customerPhone;
 
+
+    private String customerMail;
+
+    private String customerPassword;
+
+    private Date customerCreateDate;
+
    /*
     TODO : relation customeraccount(1) - account(many)(vadeli-birikim)
     */
 
-    @OneToOne(mappedBy = "accountDetail", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    private CustomerDetail customerDetail;
+    @OneToOne(mappedBy = "customerAccount", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private CustomerToken customerToken;
 
     @OneToMany(mappedBy = "customerAccount", cascade = CascadeType.ALL)
-    private Set<Account> accounts;
+    private Set<BankAccount> bankAccounts;
 
 
     @OneToMany(mappedBy = "customerAccount", cascade = CascadeType.ALL)

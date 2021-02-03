@@ -1,7 +1,7 @@
 package org.kodluyoruz.mybank.transfer;
 
 import lombok.*;
-import org.kodluyoruz.mybank.account.enums.AccountMoneyType;
+import org.kodluyoruz.mybank.account.enums.BankAccountMoneyType;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -27,7 +27,7 @@ public class Transfer {
     private Long sentUserAccountId;
 
     @Enumerated(value = EnumType.STRING)
-    private AccountMoneyType accountMoneyType;
+    private BankAccountMoneyType bankAccountMoneyType;
 
     private Date transferTime;
 

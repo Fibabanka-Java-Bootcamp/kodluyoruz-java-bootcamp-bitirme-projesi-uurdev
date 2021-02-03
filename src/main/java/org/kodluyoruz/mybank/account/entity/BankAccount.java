@@ -1,8 +1,8 @@
 package org.kodluyoruz.mybank.account.entity;
 
 import lombok.*;
-import org.kodluyoruz.mybank.account.enums.AccountMoneyType;
-import org.kodluyoruz.mybank.account.enums.AccountType;
+import org.kodluyoruz.mybank.account.enums.BankAccountMoneyType;
+import org.kodluyoruz.mybank.account.enums.BankAccountType;
 import org.kodluyoruz.mybank.card.entity.CustomerCard;
 import org.kodluyoruz.mybank.customer.entity.CustomerAccount;
 
@@ -16,10 +16,10 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "account" ,uniqueConstraints = @UniqueConstraint(columnNames = {"iban"}))
+@Table(name = "bankAccount" ,uniqueConstraints = @UniqueConstraint(columnNames = {"iban"}))
 @Entity
 @Builder
-public class Account {
+public class BankAccount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,10 +31,10 @@ public class Account {
     private BigDecimal balance;
 
     @Enumerated(value = EnumType.STRING)
-    private AccountType accountType;
+    private BankAccountType bankAccountType;
 
     @Enumerated(value = EnumType.STRING)
-    private AccountMoneyType accountMoneyType;
+    private BankAccountMoneyType bankAccountMoneyType;
 
     private Date accountCreateDate;
 
@@ -46,6 +46,6 @@ public class Account {
     @JoinColumn(name = "customer_id")
     private CustomerAccount customerAccount;
 
-    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "bankAccount", cascade = CascadeType.ALL)
     private Set<CustomerCard> customerCards;
 }

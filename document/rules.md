@@ -42,3 +42,9 @@
 - Vadesiz mevduat hesabına bağlı kullanıcı hem banka kartı hemde kredi kartı alabilicek ama varolan vadesiz tl hesabına bağlı olmalı
 
 - Bir banka hesabının 2 adet kartı olabilir , hesap 1 iken kart many olmalı
+
+
+
+### Senaryolar
+
+Bir müşteri oluşturulurken , id'si oluşunca verilen tckno : parolasını kendisi belirlicek.

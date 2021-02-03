@@ -1,11 +1,10 @@
 package org.kodluyoruz.mybank.card.entity;
 
 import lombok.*;
-import org.kodluyoruz.mybank.account.entity.Account;
+import org.kodluyoruz.mybank.account.entity.BankAccount;
 import org.kodluyoruz.mybank.card.enums.CardType;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Data
 @Getter
@@ -42,5 +41,5 @@ public class CustomerCard {
 
     @ManyToOne
     @JoinColumn(name = "account_id")
-    private Account account;
+    private BankAccount bankAccount;
 }

@@ -2,10 +2,7 @@ package org.kodluyoruz.mybank.customer.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -27,5 +24,7 @@ public class CustomerToken {
 
     private Date tokenExpiryTime;
 
-    private Long tokenOwnerCustomer;
+    @OneToOne
+    @JoinColumn(name = "customer_id")
+    private CustomerAccount customerAccount;
 }
