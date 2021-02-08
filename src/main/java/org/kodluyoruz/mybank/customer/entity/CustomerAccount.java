@@ -3,6 +3,7 @@ package org.kodluyoruz.mybank.customer.entity;
 import lombok.*;
 import org.kodluyoruz.mybank.account.entity.BankAccount;
 import org.kodluyoruz.mybank.address.entity.CustomerAddress;
+import org.kodluyoruz.mybank.customer.dto.CustomerAccountDto;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "customerAccount")
 public class CustomerAccount {
@@ -47,5 +49,14 @@ public class CustomerAccount {
     @OneToMany(mappedBy = "customerAccount", cascade = CascadeType.ALL)
     private Set<CustomerAddress> customerAddresses;
 
+
+    public CustomerAccountDto toCustomerDto(){
+        return CustomerAccountDto.builder()
+                .customerLastName(this.customerLastName)
+                .customerMail(this.customerMail)
+                .customerPhone(this.customerPhone)
+                .customerName(this.customerName)
+                .build();
+    }
 
 }

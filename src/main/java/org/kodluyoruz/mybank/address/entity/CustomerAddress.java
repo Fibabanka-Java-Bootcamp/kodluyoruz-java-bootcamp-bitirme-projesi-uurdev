@@ -40,17 +40,8 @@ public class CustomerAddress {
     @JoinColumn(name = "customer_id")
     private CustomerAccount customerAccount;
 
-  /*  public AccountDto toAccountDto(){
-        return AccountDto.builder()
-                .id(this.id)
-                .balance(this.balance)
-                .currency(this.currency)
-                .accountType(this.accountType)
-                .iban(this.iban)
-                .created_date(this.created_date)
-                .cards(this.cards)
-                .build();
-    }*/
+
+
 
 
 }
